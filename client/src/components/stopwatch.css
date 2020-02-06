@@ -1,0 +1,19 @@
+.fontgradient {
+    font-size: 42px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(45deg, rgba(70,79,81,1), rgba(250,250,250,1), rgba(70,79,81,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.jumbotron {
+    background-color: red !important;
+}
+
+.btn {
+    font-size: 30px !important;
+}
+
+.btn-warning {
+    color: white !important;
+}

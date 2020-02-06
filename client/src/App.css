@@ -2,8 +2,7 @@
   text-align: center;
   background-image: url('./images/elricbrothers.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: stretch;
+  font-family: 'Almendra', serif;
 }
-
-
 
