@@ -1,10 +1,10 @@
 import React from "react";
 import './stopwatch.css';
-import { Jumbotron, Button } from "reactstrap";
+import { Jumbotron } from "reactstrap";
 
 const Stopwatch = () => {
     return(
-      <header className='container'>
+      <header className='container bg'>
         <div className='row'>
             <div className='col-md-6 col-xs-12'>
                 <Jumbotron>

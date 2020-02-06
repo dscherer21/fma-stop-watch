@@ -6,8 +6,16 @@
     -webkit-text-fill-color: transparent;
 }
 
+.bg {
+    background-image: url('../images/elricbrothers.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+}
+
 .jumbotron {
-    background-color: red !important;
+    background-color: black !important;
 }
 
 .btn {
