@@ -1,5 +1,5 @@
 .fontgradient {
-    font-size: 42px;
+    font-size: 56px;
     font-weight: bold;
     background: -webkit-linear-gradient(45deg, rgba(70,79,81,1), rgba(250,250,250,1), rgba(70,79,81,1));
     -webkit-background-clip: text;
@@ -10,8 +10,12 @@
     background-image: url('../images/elricbrothers.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 100vh !important;
     background-size: cover;
+}
+
+.row {
+    padding-top: 15%;
 }
 
 .jumbotron {

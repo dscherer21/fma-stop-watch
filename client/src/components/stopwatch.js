@@ -4,8 +4,8 @@ import { Jumbotron } from "reactstrap";
 
 const Stopwatch = () => {
     return(
-      <header className='container bg'>
-        <div className='row'>
+      <header className='container'>
+        <div className='row justify-content-md-center'>
             <div className='col-md-6 col-xs-12'>
                 <Jumbotron>
                     <div className='fontgradient'>Fullmetal Alchemist Stopwatch</div>
