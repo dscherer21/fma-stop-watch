@@ -10,9 +10,20 @@ class Stopwatch extends React.Component {
             seconds: 0,
             miliseconds: 0
         }
+
+        
     }
 
     render() {
+
+        function MSecs(props){
+            if(props.miliseconds < 10){
+                return <p>0{props.miliseconds}</p>
+            } else {
+                return <p>{props.miliseconds}</p>
+            }
+        }
+
         return(
             <header className='container'>
                 <div className='row justify-content-md-center'>
@@ -21,7 +32,7 @@ class Stopwatch extends React.Component {
                             <div className='fontgradient'>Fullmetal Alchemist Stopwatch</div>
                         </Jumbotron>
                         <Jumbotron>
-                            <div className='fontgradient'>{this.state.minutes}:{this.state.seconds}:{this.state.miliseconds}</div>
+                            <div className='fontgradient'>{this.state.minutes}:{this.state.seconds}:<MSecs/></div>
                         </Jumbotron>
                         <button className='btn btn-primary'>Start</button>
                         <button className='btn btn-danger'>Stop</button>
