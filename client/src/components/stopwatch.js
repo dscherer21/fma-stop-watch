@@ -8,21 +8,98 @@ class Stopwatch extends React.Component {
         this.state = {
             minutes: 0,
             seconds: 0,
-            miliseconds: 0
+            milliseconds: 0
         }
 
-        
+        this.handleStart = this.handleStart.bind(this);
+        this.handleStop = this.handleStop.bind(this);
+        this.handleReset = this.handleReset.bind(this);
+        this.mSecs = this.mSecs.bind(this);
+        this.secs = this.secs.bind(this);
+        this.mins = this.mins.bind(this);
     }
+
+    /*function that increments milliseconds by 1 every millisecond*/
+    handleStart(event, error){
+        console.log('Start Button Clicked!');
+        this.setState({
+            milliseconds: (this.state.milliseconds + 1) 
+        });
+        console.log(this.state.milliseconds);
+        /*setInterval(() => {
+            this.setState({
+                milliseconds: (this.state.milliseconds + 1) 
+            });
+            console.log('tick');
+        }, 1)*/
+
+        /*Increment seconds when milliseconds reaches 1000 and reset milliseconds*/
+        if(this.state.milliseconds === 1000){
+            this.setState({
+                milliseconds: 0,
+                seconds: (this.state.seconds +1)
+            })
+        }
+
+        /*Increment minutes when seconds reaches 60 and reset seconds*/
+        if(this.state.seconds === 60){
+            this.setState({
+                seconds: 0,
+                minutes: (this.state.minutes +1)
+            })
+        }
+
+        if(error){
+            console.log(error);
+        }
+    };
+
+    handleStop(event){
+        console.log('Stop Button Clicked!');
+    }
+
+    handleReset(event){
+        console.log('Reset Button Clicked!');
+    }
+
+    mSecs(){
+        if(this.state.milliseconds < 10){
+            return <span>0{this.state.milliseconds}</span>
+        } else {
+            return <span>{this.state.milliseconds}</span>
+        }
+    }
+
+    secs(){
+        if(this.state.seconds < 10){
+            return <span>0{this.state.seconds}</span>
+        } else {
+            return <span>{this.state.seconds}</span>
+        }
+
+    }
+
+    mins(){
+        if(this.state.minutes < 10){
+            return <span>0{this.state.minutes}</span>
+        } else {
+            return <span>{this.state.minutes}</span>
+        }
+    }
+
+    
 
     render() {
 
         let MSecs;
         let Secs;
         let Mins;
-        if(this.state.miliseconds < 10){
-            MSecs = <span>0{this.state.miliseconds}</span>
+
+        /*Show a zero in front of single digit numbers
+        if(this.state.milliseconds < 10){
+            MSecs = <span>0{this.state.milliseconds}</span>
         } else {
-            MSecs = <span>{this.state.miliseconds}</span>
+            MSecs = <span>{this.state.milliseconds}</span>
         }
 
         if(this.state.seconds < 10){
@@ -35,26 +112,7 @@ class Stopwatch extends React.Component {
             Mins = <span>0{this.state.minutes}</span>
         } else {
             Mins = <span>{this.state.minutes}</span>
-        }
-
-        if(this.state.miliseconds === 60){
-            this.setState(prevState => {
-                return {
-                    miliseconds: 0,
-                    seconds: prevState.seconds +1
-                }
-            })
-        }
-
-        if(this.state.seconds === 60){
-            this.setState(prevState => {
-                return {
-                    seconds: 0,
-                    minutes: prevState.minutes +1
-                }
-            })
-        }
-    
+        }*/
 
         return(
             <header className='container'>
@@ -64,11 +122,29 @@ class Stopwatch extends React.Component {
                             <div className='fontgradient'>Fullmetal Alchemist Stopwatch</div>
                         </Jumbotron>
                         <Jumbotron>
-        <div className='fontgradient'>{Mins}:{Secs}:{MSecs}</div>
+                            <div className='fontgradient'>
+                                {/*this.state.minutes < 10 ? (
+                                    <span>0{this.state.minutes}</span>
+                                ) : (
+                                <span>{this.state.minutes}</span>
+                                )}:{this.state.seconds < 10 ? (
+                                    <span>0{this.state.seconds}</span>
+                                ) : (
+                                <span>{this.state.seconds}</span>
+                                )}:{this.state.milliseconds < 10 ? (
+                                    <span>0{this.state.milliseconds}</span>
+                                ) : (
+                                <span>{this.state.milliseconds}</span>
+                                )*/}
+                                {this.state.minutes}:{this.state.seconds}:{this.state.milliseconds}
+                            </div>
                         </Jumbotron>
-                        <button className='btn btn-primary'>Start</button>
-                        <button className='btn btn-danger'>Stop</button>
-                        <button className='btn btn-warning'>Reset</button>
+                        {/*when the Start button is clicked, it will run the handleStart function*/}
+                        <button className='btn btn-primary' onClick={this.handleStart}>Start</button>
+                        {/*when the Stop button is clicked, it will run the handleStop function*/}
+                        <button className='btn btn-danger' onClick={this.handleStop}>Stop</button>
+                        {/*when the Reset button is clicked, it will run the handleReset function*/}
+                        <button className='btn btn-warning' onClick={this.handleReset}>Reset</button>
                     </div>
                 </div>
             </header>
