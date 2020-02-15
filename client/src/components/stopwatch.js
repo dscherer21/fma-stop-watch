@@ -21,11 +21,14 @@ class Stopwatch extends React.Component {
 
     /*function that increments milliseconds by 1 every millisecond*/
     handleStart(event, error){
+        event.preventDefault();
         console.log('Start Button Clicked!');
         this.setState({
             milliseconds: (this.state.milliseconds + 1) 
         });
         console.log(this.state.milliseconds);
+        
+        
         /*setInterval(() => {
             this.setState({
                 milliseconds: (this.state.milliseconds + 1) 
@@ -33,7 +36,7 @@ class Stopwatch extends React.Component {
             console.log('tick');
         }, 1)*/
 
-        /*Increment seconds when milliseconds reaches 1000 and reset milliseconds*/
+        /*Increment seconds when milliseconds reaches 1000 and reset milliseconds
         if(this.state.milliseconds === 1000){
             this.setState({
                 milliseconds: 0,
@@ -41,13 +44,13 @@ class Stopwatch extends React.Component {
             })
         }
 
-        /*Increment minutes when seconds reaches 60 and reset seconds*/
+        /*Increment minutes when seconds reaches 60 and reset seconds
         if(this.state.seconds === 60){
             this.setState({
                 seconds: 0,
                 minutes: (this.state.minutes +1)
             })
-        }
+        }*/
 
         if(error){
             console.log(error);
