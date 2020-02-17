@@ -14,9 +14,7 @@ class Stopwatch extends React.Component {
         this.handleStart = this.handleStart.bind(this);
         this.handleStop = this.handleStop.bind(this);
         this.handleReset = this.handleReset.bind(this);
-        this.mSecs = this.mSecs.bind(this);
-        this.secs = this.secs.bind(this);
-        this.mins = this.mins.bind(this);
+    
     }
 
     /*function that increments milliseconds by 1 every millisecond*/
@@ -65,30 +63,7 @@ class Stopwatch extends React.Component {
         console.log('Reset Button Clicked!');
     }
 
-    mSecs(){
-        if(this.state.milliseconds < 10){
-            return <span>0{this.state.milliseconds}</span>
-        } else {
-            return <span>{this.state.milliseconds}</span>
-        }
-    }
-
-    secs(){
-        if(this.state.seconds < 10){
-            return <span>0{this.state.seconds}</span>
-        } else {
-            return <span>{this.state.seconds}</span>
-        }
-
-    }
-
-    mins(){
-        if(this.state.minutes < 10){
-            return <span>0{this.state.minutes}</span>
-        } else {
-            return <span>{this.state.minutes}</span>
-        }
-    }
+   
 
     
 
