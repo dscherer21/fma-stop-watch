@@ -1,8 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import './stopwatch.css';
 import { Jumbotron } from "reactstrap";
 
 function Stopwatch() {
+
+    /*utilizing useState to set the state with React Hooks*/
+    let [mSecs, setMSecs] = useState(0);
+    let [secs, setSecs] = useState(0);
+    let [mins, setMins] = useState(0);
+
+    /*function to start the timer*/
+    function startTimer(e){
+        console.log('Start Button clicked!');
+    }
+
+    /*function to stop the timer*/
+    function stopTimer(e){
+        console.log('Stop Button clicked!');
+    }
+
+    /*function to reset the timer*/
+    function resetTimer(e){
+        console.log('Reset Button clicked!');
+    }
 
     return(
         <header className='container'>
@@ -17,11 +37,11 @@ function Stopwatch() {
                         </div>
                     </Jumbotron>
                     {/*when the Start button is clicked, it will run the handleStart function*/}
-                    <button className='btn btn-primary'>Start</button>
+                    <button className='btn btn-primary' onClick={startTimer}>Start</button>
                     {/*when the Stop button is clicked, it will run the handleStop function*/}
-                    <button className='btn btn-danger'>Stop</button>
+                    <button className='btn btn-danger' onClick={stopTimer}>Stop</button>
                     {/*when the Reset button is clicked, it will run the handleReset function*/}
-                    <button className='btn btn-warning'>Reset</button>
+                    <button className='btn btn-warning' onClick={resetTimer}>Reset</button>
                 </div>
             </div>
         </header>
