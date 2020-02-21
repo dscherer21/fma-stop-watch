@@ -33,14 +33,14 @@ function Stopwatch() {
                     </Jumbotron>
                     <Jumbotron>
                         <div className='fontgradient'>
-                            00:00:00
+                            {mins}:{secs}:{mSecs}
                         </div>
                     </Jumbotron>
-                    {/*when the Start button is clicked, it will run the handleStart function*/}
+                    {/*when the Start button is clicked, it will run the startTimer function*/}
                     <button className='btn btn-primary' onClick={startTimer}>Start</button>
-                    {/*when the Stop button is clicked, it will run the handleStop function*/}
+                    {/*when the Stop button is clicked, it will run the stopTimer function*/}
                     <button className='btn btn-danger' onClick={stopTimer}>Stop</button>
-                    {/*when the Reset button is clicked, it will run the handleReset function*/}
+                    {/*when the Reset button is clicked, it will run the resetTimer function*/}
                     <button className='btn btn-warning' onClick={resetTimer}>Reset</button>
                 </div>
             </div>
