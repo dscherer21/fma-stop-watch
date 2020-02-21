@@ -12,6 +12,7 @@ function Stopwatch() {
     /*function to start the timer*/
     function startTimer(e){
         console.log('Start Button clicked!');
+        setInterval(setMSecs(mSecs + 1), 100);
     }
 
     /*function to stop the timer*/
