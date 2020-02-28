@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import './stopwatch.css';
 import { Jumbotron } from "reactstrap";
 
@@ -12,8 +12,10 @@ function Stopwatch() {
     /*function to start the timer*/
     function startTimer(e){
         console.log('Start Button clicked!');
-        setInterval((function(){setMSecs(mSecs + 1)},console.log(mSecs)), 1);
+        setInterval((setMSecs(mSecs + 1), console.log("Hello!")),1000);
     }
+
+   
 
     /*function to stop the timer*/
     function stopTimer(e){
