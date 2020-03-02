@@ -9,10 +9,17 @@ function Stopwatch() {
     let [secs, setSecs] = useState(0);
     let [mins, setMins] = useState(0);
 
+    useEffect(() => {
+        function runTimer(e){
+            setInterval(setMSecs(mSecs + 1),1000);
+        }
+        
+    })
+
     /*function to start the timer*/
     function startTimer(e){
-        console.log('Start Button clicked!');
-        setInterval((setMSecs(mSecs + 1), console.log("Hello!")),1000);
+            console.log("Start Timer Button clicked!");
+            setInterval(() => (setMSecs(mSecs + 1), console.log("Tick")), 1000);
     }
 
    
@@ -20,6 +27,7 @@ function Stopwatch() {
     /*function to stop the timer*/
     function stopTimer(e){
         console.log('Stop Button clicked!');
+        clearInterval();
     }
 
     /*function to reset the timer*/
