@@ -10,18 +10,15 @@ function Stopwatch() {
     const [mins, setMins] = useState(0);
 
     /*function to start the timer*/
-    function startTimer(){
+    const startTimer = () => {
             console.log("Start Timer Button clicked!");
             //setInterval(() => (setMSecs(mSecs + 1), console.log(mSecs)), 1000);
             setMSecs(mSecs + 1);
             console.log(mSecs);
-            
     }
 
-   
-
     /*function to stop the timer*/
-    function stopTimer(e){
+    const stopTimer = (e) => {
         console.log('Stop Button clicked!');
         clearInterval();
     }
@@ -41,9 +38,9 @@ function Stopwatch() {
                         <div className='fontgradient'>Fullmetal Alchemist Stopwatch</div>
                     </Jumbotron>
                     <Jumbotron>
-                        <div className='fontgradient'>
+                        <p className='fontgradient'>
                             {mSecs}
-                        </div>
+                        </p>
                     </Jumbotron>
                     {/*when the Start button is clicked, it will run the startTimer function*/}
                     <button className='btn btn-primary' onClick={startTimer}>Start</button>
