@@ -10,11 +10,12 @@ function Stopwatch() {
     const [mins, setMins] = useState(0);
 
     /*function to start the timer*/
-    const startTimer = () => {
-            console.log("Start Timer Button clicked!");
-            //setInterval(() => (setMSecs(mSecs + 1), console.log(mSecs)), 1000);
-            setMSecs(mSecs + 1);
-            console.log(mSecs);
+    function startTimer(e) {
+        e.preventDefault();
+        console.log("Start Timer Button clicked!");
+        //setInterval(() => (setMSecs(mSecs + 1), console.log(mSecs)), 1000);
+        setMSecs(mSecs + 1);
+        console.log(mSecs);
     }
 
     /*function to stop the timer*/
