@@ -38,10 +38,12 @@ function Stopwatch() {
                         <div className='fontgradient'>Fullmetal Alchemist Stopwatch</div>
                     </Jumbotron>
                     <div className='jumbotron'>
+                        {/*This is the original state call. For some reason, it will not render the state change here.*/}
                         <p className='fontgradient'>
                             {mSecs}
                         </p>
                     </div>
+                    {/*Here's where I am calling the state outside the jumbotron tag. It works here.*/}
                     <p>{mSecs}</p>
                     {/*when the Start button is clicked, it will run the startTimer function*/}
                     <button className='btn btn-primary' onClick={startTimer}>Start</button>
