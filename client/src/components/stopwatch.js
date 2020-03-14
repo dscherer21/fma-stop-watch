@@ -10,6 +10,23 @@ function Stopwatch() {
     const [hours, setHours] = useState(0);
     const [tick, setTick] = useState();
 
+    /*if secs is greater than 59, increment mins by 1 and reset secs to zero.*/
+    if(secs > 59) {
+        setMins(mins => mins + 1);
+        setSecs(0);
+    }
+
+    /*if mins is greater than 59, increment hours by 1 and reset mins to zero.*/
+    if(mins > 59) {
+        setHours(hours => hours + 1);
+        setMins(0);
+    }
+
+    /**/
+    if(secs < 10){
+        
+    }
+
     /*function to start the timer*/
     function startTimer() {
         console.log("Start Timer Button clicked!");
@@ -18,13 +35,13 @@ function Stopwatch() {
     }
 
     /*function to stop the timer*/
-    const stopTimer = () => {
+    function stopTimer(){
         console.log('Stop Button clicked!');
         clearInterval(tick);
     }
 
     /*function to reset the timer*/
-    function resetTimer(e){
+    function resetTimer(){
         console.log('Reset Button clicked!');
         clearInterval(tick);
         setSecs(0);
