@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import './stopwatch.css';
 import { Jumbotron } from "reactstrap";
 
@@ -9,6 +9,9 @@ function Stopwatch() {
     const [mins, setMins] = useState(0);
     const [hours, setHours] = useState(0);
     const [tick, setTick] = useState();
+    let renderSecs;
+    let renderMins;
+    let renderHours;
 
     /*if secs is greater than 59, increment mins by 1 and reset secs to zero.*/
     if(secs > 59) {
@@ -22,9 +25,25 @@ function Stopwatch() {
         setMins(0);
     }
 
-    /**/
+    /*if secs is less than 10, render a zero in front of it.*/
     if(secs < 10){
-        
+        renderSecs = '0' + secs;
+    } else{
+        renderSecs = secs;
+    }
+
+    /*if mins is less than 10, render a zero in front of it.*/
+    if(mins < 10){
+        renderMins = '0' + mins;
+    } else{
+        renderMins = mins;
+    }
+
+    /*if hours is less than 10, render a zero in front of it.*/
+    if(hours < 10){
+        renderHours = '0' + hours;
+    } else{
+        renderHours = hours;
     }
 
     /*function to start the timer*/
@@ -60,7 +79,7 @@ function Stopwatch() {
 
                     <div className='jumbotron'>
                         <p className='fontgradient'>
-                            {hours}:{mins}:{secs}
+                            {renderHours}:{renderMins}:{renderSecs}
                         </p>
                     </div>
 
