@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/fma-stop-watch/precache-manifest.ee95765071511865a1697487858f6c23.js"
+  "/fma-stop-watch/precache-manifest.e07697475de3573b3a9ea678f7a24991.js"
 );
 
 self.addEventListener('message', (event) => {

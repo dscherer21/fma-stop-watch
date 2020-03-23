@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/fma-stop-watch/static/css/main.0d4cc893.chunk.css",
-    "main.js": "/fma-stop-watch/static/js/main.8613de32.chunk.js",
-    "main.js.map": "/fma-stop-watch/static/js/main.8613de32.chunk.js.map",
-    "runtime-main.js": "/fma-stop-watch/static/js/runtime-main.ffa232f1.js",
-    "runtime-main.js.map": "/fma-stop-watch/static/js/runtime-main.ffa232f1.js.map",
-    "static/css/2.67123b20.chunk.css": "/fma-stop-watch/static/css/2.67123b20.chunk.css",
-    "static/js/2.06811b91.chunk.js": "/fma-stop-watch/static/js/2.06811b91.chunk.js",
-    "static/js/2.06811b91.chunk.js.map": "/fma-stop-watch/static/js/2.06811b91.chunk.js.map",
+    "main.js": "/fma-stop-watch/static/js/main.ce9a2bbb.chunk.js",
+    "main.js.map": "/fma-stop-watch/static/js/main.ce9a2bbb.chunk.js.map",
+    "runtime-main.js": "/fma-stop-watch/static/js/runtime-main.149a5b6b.js",
+    "runtime-main.js.map": "/fma-stop-watch/static/js/runtime-main.149a5b6b.js.map",
+    "static/css/2.89f067aa.chunk.css": "/fma-stop-watch/static/css/2.89f067aa.chunk.css",
+    "static/js/2.54abdda6.chunk.js": "/fma-stop-watch/static/js/2.54abdda6.chunk.js",
+    "static/js/2.54abdda6.chunk.js.map": "/fma-stop-watch/static/js/2.54abdda6.chunk.js.map",
     "index.html": "/fma-stop-watch/index.html",
-    "precache-manifest.ee95765071511865a1697487858f6c23.js": "/fma-stop-watch/precache-manifest.ee95765071511865a1697487858f6c23.js",
+    "precache-manifest.e07697475de3573b3a9ea678f7a24991.js": "/fma-stop-watch/precache-manifest.e07697475de3573b3a9ea678f7a24991.js",
     "service-worker.js": "/fma-stop-watch/service-worker.js",
-    "static/css/2.67123b20.chunk.css.map": "/fma-stop-watch/static/css/2.67123b20.chunk.css.map",
+    "static/css/2.89f067aa.chunk.css.map": "/fma-stop-watch/static/css/2.89f067aa.chunk.css.map",
     "static/css/main.0d4cc893.chunk.css.map": "/fma-stop-watch/static/css/main.0d4cc893.chunk.css.map",
-    "static/js/2.06811b91.chunk.js.LICENSE.txt": "/fma-stop-watch/static/js/2.06811b91.chunk.js.LICENSE.txt",
+    "static/js/2.54abdda6.chunk.js.LICENSE.txt": "/fma-stop-watch/static/js/2.54abdda6.chunk.js.LICENSE.txt",
     "static/media/stopwatch.css": "/fma-stop-watch/static/media/elricbrothers.5827119e.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ffa232f1.js",
-    "static/css/2.67123b20.chunk.css",
-    "static/js/2.06811b91.chunk.js",
+    "static/js/runtime-main.149a5b6b.js",
+    "static/css/2.89f067aa.chunk.css",
+    "static/js/2.54abdda6.chunk.js",
     "static/css/main.0d4cc893.chunk.css",
-    "static/js/main.8613de32.chunk.js"
+    "static/js/main.ce9a2bbb.chunk.js"
   ]
 }
