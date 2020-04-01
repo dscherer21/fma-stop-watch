@@ -9,6 +9,7 @@ function Stopwatch() {
     const [mins, setMins] = useState(0);
     const [hours, setHours] = useState(0);
     const [tick, setTick] = useState();
+    const [timerRunning, setTimerRunning] = useState(false);
     let renderSecs;
     let renderMins;
     let renderHours;
@@ -50,25 +51,25 @@ function Stopwatch() {
     function startTimer() {
         console.log("Start Timer Button clicked!");
         /*This IF statement prevents additional setIntervals from being stacked while the timer is running.*/
-        /*if(tick === undefined || 0) {
-            /*setting tick as state so that it retains the setInterval function across re-renders
+        if(timerRunning === false) {
+            /*setting tick as state so that it retains the setInterval function across re-renders*/
             setTick(setInterval(() => setSecs(secs => secs + 1), 1000));
-        }*/
-
-        /*setting tick as state so that it retains the setInterval function across re-renders*/
-        setTick(setInterval(() => setSecs(secs => secs + 1), 1000));
+            setTimerRunning(true);
+        }
     }
 
     /*function to stop the timer*/
     function stopTimer(){
         console.log('Stop Button clicked!');
         clearInterval(tick);
+        setTimerRunning(false);
     }
 
     /*function to reset the timer*/
     function resetTimer(){
         console.log('Reset Button clicked!');
         clearInterval(tick);
+        setTimerRunning(false);
         setSecs(0);
         setMins(0);
         setHours(0);
