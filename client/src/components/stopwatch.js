@@ -10,9 +10,10 @@ function Stopwatch() {
     const [hours, setHours] = useState(0);
     const [tick, setTick] = useState();
     const [timerRunning, setTimerRunning] = useState(false);
-    let renderSecs;
-    let renderMins;
-    let renderHours;
+    /*Render a zero in front of the variable, then remove when the variable if equal to double digits*/
+    let renderSecs= ('0' + secs).slice(-2);
+    let renderMins= ('0' + mins).slice(-2);
+    let renderHours= ('0' + hours).slice(-2);
 
     /*if secs is greater than 59, increment mins by 1 and reset secs to zero.*/
     if(secs > 59) {
@@ -24,27 +25,6 @@ function Stopwatch() {
     if(mins > 59) {
         setHours(hours => hours + 1);
         setMins(0);
-    }
-
-    /*if secs is less than 10, render a zero in front of it.*/
-    if(secs < 10){
-        renderSecs = '0' + secs;
-    } else{
-        renderSecs = secs;
-    }
-
-    /*if mins is less than 10, render a zero in front of it.*/
-    if(mins < 10){
-        renderMins = '0' + mins;
-    } else{
-        renderMins = mins;
-    }
-
-    /*if hours is less than 10, render a zero in front of it.*/
-    if(hours < 10){
-        renderHours = '0' + hours;
-    } else{
-        renderHours = hours;
     }
 
     /*function to start the timer*/
